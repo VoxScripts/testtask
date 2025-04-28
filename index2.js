@@ -49,12 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
 
     const taskName = document.getElementById('taskName').value;
+    const startDate = document.getElementById('startDate').value;
     const startTime = document.getElementById('startTime').value;
+    const endDate = document.getElementById('endDate').value;
     const endTime = document.getElementById('endTime').value;
     const priority = document.getElementById('priorityToggle').checked;
 
-    const start = new Date(startTime);
-    const end = new Date(endTime);
+    const start = new Date(`${startDate}T${startTime}`);
+    const end = new Date(`${endDate}T${endTime}`);
 
     if (end <= start) {
       alert('End time must be after start time!');
@@ -70,8 +72,19 @@ document.addEventListener('DOMContentLoaded', () => {
     taskCard.innerHTML = `
       <h3>${taskName}</h3>
       <div class="time-range">${start.toLocaleString()} - ${end.toLocaleString()}</div>
-      <label><input type="checkbox"> Done</label>
+      <label><input type="checkbox" class="done-checkbox"> Done</label>
     `;
+
+    const checkbox = taskCard.querySelector('.done-checkbox');
+    checkbox.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        taskCard.style.transition = "opacity 0.5s ease";
+        taskCard.style.opacity = "0";
+        setTimeout(() => {
+          taskCard.remove();
+        }, 500);
+      }
+    });
 
     taskContainer.appendChild(taskCard);
     taskPopup.style.display = 'none';
