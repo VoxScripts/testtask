@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="index.css">
+  <script defer src="index2.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navclass">
+      <div class="logo">
+        <a href="index2.html">Task Manager</a>
+      </div>
+      <ul>
+        <li><a href="index2.html" class="active">Home</a></li>
+        <li><a href="index.html">Application Info</a></li>
+        <li><a href="id.html">Developer Profiles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <aside id="link-panel">
+    <h2>Link Panel</h2>
+    <ul id="panel-list">
+      <li><a href="index2.html">Today's Task</a></li>
+      <li><a href="priority.html">Priority Tasks</a></li>
+      <li><a href="unfinished.html">Unfinished Tasks</a></li>
+    </ul>
+  </aside>
+
+  <main id="task-main">
+    <div class="task-header">
+      <h1>Today's Tasks</h1>
+      <button id="addTaskButton">Add Task</button>
+    </div>
+
+    <div id="taskContainer">
+      <!-- Task cards will be added here -->
+    </div>
+  </main>
+
+  <!-- Popup Form -->
+  <div id="taskPopup" class="popup-overlay">
+    <div class="popup-content">
+      <h2>Add New Task</h2>
+      <form id="taskForm">
+        <label>Task Name:</label>
+        <input type="text" id="taskName" required>
+
+        <label>Start Time:</label>
+        <input type="time" id="startTime" required>
+
+        <label>End Time:</label>
+        <input type="time" id="endTime" required>
+
+        <label>Priority:</label>
+        <input type="checkbox" id="priorityToggle"> Yes
+
+        <div class="popup-buttons">
+          <button type="submit">Add Task</button>
+          <button type="button" id="closePopup">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
