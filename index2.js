@@ -53,6 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const endTime = document.getElementById('endTime').value;
     const priority = document.getElementById('priorityToggle').checked;
 
+    const start = new Date(startTime);
+    const end = new Date(endTime);
+
+    if (end <= start) {
+      alert('End time must be after start time!');
+      return;
+    }
+
     const taskCard = document.createElement('div');
     taskCard.className = 'task-card';
     if (priority) {
@@ -61,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     taskCard.innerHTML = `
       <h3>${taskName}</h3>
-      <div class="time-range">${startTime} - ${endTime}</div>
+      <div class="time-range">${start.toLocaleString()} - ${end.toLocaleString()}</div>
       <label><input type="checkbox"> Done</label>
     `;
 
@@ -75,9 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function sortTasks() {
     const tasks = Array.from(taskContainer.children);
     tasks.sort((a, b) => {
-      const timeA = a.querySelector('.time-range').innerText.split(' - ')[0];
-      const timeB = b.querySelector('.time-range').innerText.split(' - ')[0];
-      return timeA.localeCompare(timeB);
+      const timeA = new Date(a.querySelector('.time-range').innerText.split(' - ')[0]);
+      const timeB = new Date(b.querySelector('.time-range').innerText.split(' - ')[0]);
+      return timeA - timeB;
     });
     tasks.forEach(task => taskContainer.appendChild(task));
   }
