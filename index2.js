@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    // Create task card for Home Page
     const taskCard = document.createElement('div');
     taskCard.className = 'task-card';
     if (priority) {
@@ -86,7 +87,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Add to Home Page
     taskContainer.appendChild(taskCard);
+
+    // If Priority, also save to localStorage
+    if (priority) {
+      let priorityTasks = JSON.parse(localStorage.getItem('priorityTasks')) || [];
+      priorityTasks.push({
+        taskName: taskName,
+        start: start.toISOString(),
+        end: end.toISOString()
+      });
+      localStorage.setItem('priorityTasks', JSON.stringify(priorityTasks));
+    }
+
     taskPopup.style.display = 'none';
     taskForm.reset();
 
