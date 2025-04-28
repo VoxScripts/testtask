@@ -1,0 +1,110 @@
+/* --- TASK MANAGER NEW STYLES --- */
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#addTaskButton {
+  background-color: brown;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#addTaskButton:hover {
+  background-color: darkred;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Popup Content */
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+}
+
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="time"] {
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-buttons button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.popup-buttons button[type="submit"] {
+  background-color: brown;
+  color: white;
+}
+
+.popup-buttons button#closePopup {
+  background-color: grey;
+  color: white;
+}
+
+/* Task Cards */
+#taskContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.task-card {
+  background: white;
+  padding: 20px;
+  border-left: 5px solid brown;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.task-card.priority {
+  border-left-color: red;
+}
+
+.task-card h3 {
+  margin: 0 0 10px 0;
+}
+
+.task-card .time-range {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
