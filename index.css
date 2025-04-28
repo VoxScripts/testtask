@@ -11,7 +11,7 @@ body {
 }
 
 main {
-  margin-left: 290px;
+  margin-left: 280px;
   margin-right: 60px;
   padding: 20px;
   line-height: 1.6;
@@ -149,7 +149,7 @@ ul.subheadings {
   background-color: black !important;
 }
 
-/* --- TASK MANAGER NEW STYLES --- */
+/* --- Task Manager Styles --- */
 
 .task-header {
   display: flex;
@@ -172,7 +172,6 @@ ul.subheadings {
   background-color: darkred;
 }
 
-/* Popup Overlay */
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -187,7 +186,6 @@ ul.subheadings {
   z-index: 999;
 }
 
-/* Popup Content */
 .popup-content {
   background: white;
   padding: 30px;
@@ -202,7 +200,8 @@ ul.subheadings {
 }
 
 .popup-content input[type="text"],
-.popup-content input[type="time"] {
+.popup-content input[type="time"],
+.popup-content input[type="date"] {
   padding: 8px;
   margin-bottom: 15px;
   border-radius: 6px;
@@ -231,7 +230,6 @@ ul.subheadings {
   color: white;
 }
 
-/* Task Cards */
 #taskContainer {
   display: flex;
   flex-direction: column;
@@ -244,6 +242,7 @@ ul.subheadings {
   border-left: 5px solid brown;
   border-radius: 8px;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  transition: opacity 0.5s ease; /* FADE OUT animation */
 }
 
 .task-card.priority {
