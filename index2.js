@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Activate correct navigation highlighting
   const activePage = window.location.pathname.split('/').pop();
   const navLinks = document.querySelectorAll('.navclass li a');
   const homeNavLink = document.querySelector('.navclass li a[href="index2.html"]');
@@ -30,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- New Task Manager Logic ---
+  // --- Task Manager Logic ---
   const addTaskButton = document.getElementById('addTaskButton');
   const taskPopup = document.getElementById('taskPopup');
   const closePopup = document.getElementById('closePopup');
