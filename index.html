@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info-Task Manager</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navclass">
+            <div class="logo">
+                <a href="index2.html">
+                    Task Manager
+                </a>
+            </div>
+            <ul>
+                <li>
+                    <a href="index2.html">Home</a>
+                </li
+                ><li>
+                    <a href="index.html">Application Info</a> <!--#Stay on the current page-->
+                </li
+                ><li>
+                    <a href="id.html">Developer Profiles</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <aside id="table-of-contents">
+        <h2>Table of Contents</h2>
+        <ul id="toc-list">
+            <!-- TOC links will be generated dynamically -->
+        </ul>
+    </aside>    
+    <main>
+        <section>
+<h1 id="Information" >
+                Information
+            </h1>
+            <p>
+                This page provides information about the application, including an overview, its features, 
+                and the development tools used by the developers to create it.
+            </p>
+        </section>
+        <hr>
+        <section>
+<h1 id="Overview">
+                Application Overview
+            </h1>
+            <p>
+                The Task Manager application helps users organize, prioritize, and track tasks
+                or activities. Its main purpose is to enhance productivity by keeping tasks 
+                manageable and ensuring deadlines are met.
+            </p>
+        </section>
+        <hr>
+        <section>
+<h1 id="Feature">
+                Features
+            </h1>
+            <section>
+<h2 id="Basic">
+                    Basic Features
+                </h2>
+                <ul class="main">
+                    <li>
+                        View Today's Task
+                    </li>
+                    <ul class="description">
+                        <li>Displays the current day's tasks in a table,
+                            showing the tasks and their sheduled times.
+                        </li>
+                    </ul>
+                    <li>
+                        Add Tasks with Priority
+                    </li>
+                    <ul>
+                        <li>
+                            Allow users to add tasks and set their 
+                            priority levels to manage workloads effectively. 
+                        </li>
+                    </ul>
+                    <li>
+                        Task Tracking
+                    </li>
+                    <ul class="description">
+                        <li>Provide a estimated completion time for each
+                            task based on a progress percentage.
+                        </li>
+                    </ul>
+                    <li>
+                        Incomplete Task Overview
+                    </li>
+                    <ul class="description">
+                        <li>
+                            Show a list of incomplete tasks along with 
+                            the remaining time required for each.
+                        </li>
+                    </ul>
+                </ul>
+            </section>
+            <section>
+<h2 id="Additional">
+                    Additional Features
+                </h2>
+                <ul class="main">
+                    <li>
+                        Notifications 
+                    </li>
+                    <ul class="description">
+                        <li>
+                            Notify users about tasks not completed on time and prompt them 
+                            to update the completion percentage. Based on the updated 
+                            percentage, calculate and display the remaining time required
+                             to complete the task.
+                        </li>
+                    </ul>
+                    <li>
+                        Incomplete Task Overview
+                    </li>
+                    <ul>
+                        <li>
+                            Displays a list of all incomplete tasks along with the time required to finish each. 
+                            The list is sorted in ascending order of remaining time, 
+                            allowing users to prioritize their tasks effectively. 
+                        </li>
+                    </ul>
+                    <li>
+                        Sign-In Functionality
+                    </li>
+                    <ul class="description">
+                        <li>
+                            Allows users to log into their personal task manager accounts
+                            and access their custom tasks.
+                        </li>
+                    </ul>
+                    <li>
+                        Developers Profile
+                    </li>
+                    <ul class="description">
+                        <li>
+                            Offers insights into the developers of the application.
+                        </li>
+                    </ul>
+                </ul>
+            </section>
+        </section>
+        <hr>
+        <section>
+<h1 id="Tools">
+                Development Tools
+            </h1>
+            <section>
+<h2 id="Software">
+                    Software
+                </h2>
+                <p>
+                    Software refers to the programs and tools that allow a computer or device to perform specific tasks. 
+                    It includes everything from the applications users interact with (like task management tools or design tools) 
+                    to the underlying systems that run and manage hardware.
+                </p>
+                <ul class="main">
+                    <li>
+                        Visual Studio
+                    </li>
+                    <ul class="description">
+                        <li>
+                            Visual Studio is an IDE that supports various programming
+                            languages like C#, JavaScript, and Python, and provides features like
+                            code editing, and debugging.
+                        </li> 
+                        <li>
+                            Purpose
+                        </li>
+                        <ul class="purpose">
+                            <li>
+                                Main tool for developing the website.
+                                Provides a robust environment for coding,
+                                debugging, and testing the application efficiently.
+                            </li>
+                        </ul>
+                    </ul>
+                    <li>
+                        Node.js
+                    </li>
+                    <ul class="description">
+                        <li>
+                            It is a runtime environment that allows JavaScriptto run on the server side. 
+                            It's fast, and suitable for building scalable applications.
+                        </li> 
+                        <li>
+                            Purpose
+                        </li>
+                        <ul class="purpose">
+                            <li>
+                                For handling user sign-in process. Use libraries
+                                like Passport.js to manage user sessions securely
+                            </li>
+                            <li>
+                                To manage server-side communication, such as fetching user data or 
+                                handling notifications for incomplete tasks.
+                            </li>
+                        </ul>
+                    </ul>
+                    <li>
+                        MongoDB
+                    </li>
+                    <ul class="description">
+                        <li>
+                            It is a NoSQL database known for its flexibility
+                            in handling unstructured data using JSON like documents.
+                        </li> 
+                        <li>
+                            Purpose
+                        </li>
+                        <ul class="purpose">
+                            <li>
+                                MongoDB will store information related to tasks,
+                                such as task descriptions, priorities, estimated 
+                                completion percentages, and remaining time.
+
+                            </li>
+                            <li>
+                                Its JSON-like document structure allows for flexibility,
+                                which is perfect for handling dynamic data like 
+                                task progress updates or AI calculated time estimates.
+                            </li>
+                        </ul>
+                    </ul>
+                    <li>
+                        Inkscape
+                    </li>
+                    <ul class="description">
+                        <li>
+                            It is a free,open source vector graphics editor
+                            used for creating and editing scalable graphics such as 
+                            logos,illustrations, and diagrams.
+                        </li> 
+                        <li>
+                            Purpose
+                        </li>
+                        <ul class="purpose">
+                            <li>
+                                Designing the logo for the task manager website.
+                                Its powerful drawing and vector editing tools allows to create
+                                high-quality, scalable graphics that will look sharp on any screen
+                                size.
+                            </li>
+                        </ul>
+                    </ul>
+                </ul>
+            </section>
+            <section>
+<h2 id="Framework">
+                    Framework
+                </h2>
+                <p>
+                    A framework is a pre-built structure or set of tools that 
+                    simplifies and speeds up development by providing reusable 
+                    components for building applications.
+                </p>
+                <ul class="main">
+                    <li>
+                        Express.js
+                    </li>
+                    <ul class="description">
+                        <li>
+                            Web framework built on top of Node.js. It simplifies
+                            the process of building server-side applications by
+                            offering tools for routing, HTTP request handling.
+                        </li> 
+                        <li>
+                            Purpose
+                        </li>
+                        <ul class="purpose">
+                            <li>
+                                It will create RESTful APIs that manage user
+                                related requests, such as login authentication, retrieving
+                                tasks and saving updates to the database.
+                            </li>
+                            <li>
+                                It ensures seamless connection between 
+                                frontend and backend.
+                            </li>
+                        </ul>
+                    </ul>
+                    <li>
+                        Flask
+                    </li>
+                    <ul class="description">
+                        <li>
+                            It is a Python web framework used to create web applications
+                            and APIs quickly. It's highly extensible and works well with 
+                            Python's data science and AI libraries.
+                        </li> 
+                        <li>
+                            Purpose
+                        </li>
+                        <ul class="purpose">
+                            <li>
+                                It will handle the AI driven task time estimations by
+                                processing completion percentages and calculating the remaining time dynamically.
+                            </li>
+                            <li>
+                                It creates a dedicated interface for our Python logic,
+                                allowing Node.js (or the frontend directly) to request 
+                                and retrieve AI driven results.
+                            </li>
+                        </ul>
+                    </ul>
+                    <li>
+                        HTML & CSS
+                    </li>
+                    <ul class="description">
+                        <li>
+                            HTML provides the structure, while CSS is used 
+                            for styling the application.
+                        </li> 
+                        <li>
+                            Purpose
+                        </li>
+                        <ul class="purpose">
+                            <li>
+                                It is essential for designing the navigation bar,
+                                table of contents and the overall user interface.
+                            </li>
+                        </ul>
+                    </ul>
+                    <li>
+                        Vanilla Javascript
+                    </li>
+                    <ul class="description">
+                        <li>
+                            It is a scripting language for creating dynamic
+                            and interactive web pages. When used without a 
+                            framework, it offers full control over frontend behaviour.
+                        </li> 
+                        <li>
+                            Purpose
+                        </li>
+                        <ul class="purpose">
+                            <li>
+                                It will power interactive elements, such as 
+                                smooth scrolling through the table of contents
+                                and highlighting active links.
+                            </li>
+                            <li>
+                                It enables dynamic updates to the user interface,
+                                such as refreshing task progress in real-time.
+                            </li>
+                        </ul>
+                    </ul>
+                </ul>
+            </section>
+            <section>
+<h2 id="Platform">
+                    Platform
+                </h2>
+                <p>
+                    A platform provides the foundation and tools needed to 
+                    develop, host, and manage applications. It supports 
+                    activities like collaborating on code, managing projects, 
+                    hosting websites, or scaling services to meet user demands.
+                </p>
+                <ul class="main">
+                    <li>
+                        Github
+                    </li>
+                    <ul class="description">
+                        <li>
+                            Github is a playform for version control and 
+                            collaborative coding. It uses Git to track changes
+                            in our project and helps our team work together effectively.
+                        </li> 
+                        <li>
+                            Purpose
+                        </li>
+                        <ul class="purpose">
+                            <li>
+                                Collaborate with team members by sharing code,
+                                tracking progress, and managing pull requests.
+                            </li>
+                            <li>
+                                Maintain a repository of our project's source code 
+                                to keep versions controlled and organized.
+                            </li>
+                            <li>
+                                Integrate GitHub with other tools like CI pipelines 
+                                to automate testing and deployment workflows.
+                                <span class="Maybe">Try it out</span>
+                            </li>
+                        </ul>
+                    </ul>
+                    <li>
+                        Microsoft Azure
+                    </li>
+                    <ul class="description">
+                        <li>
+                            It is a cloud computing platform that offers
+                            a wide range of services, such as application hosting, database management, 
+                            AI services, and more.
+                        </li> 
+                        <li>
+                            Purpose
+                        </li>
+                        <ul class="purpose">
+                            <li>
+                                Azure App Service is ideal for deploying our task manager
+                                application and keeping it accessible online.
+                            </li>
+                            <li>
+                                Azure can support MongoDB hosting using services like 
+                                Azure Cosmos DB, a NoSQL database service.
+                            </li>
+                            <li>
+                                Azure's AI and machine learning services could be used if 
+                                we plan on enhancing the AI driven task completion prediction.
+                            </li>
+                        </ul>
+                    </ul>
+                </ul>
+            </section>
+        </section>
+    </main>
+    <hr>
+</body>
+</html>
